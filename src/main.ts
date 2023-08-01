@@ -5,7 +5,9 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
 
-  app.enableCors();
+  /*   app.enableCors({
+    'Apollo-Require-Preflight': true,
+  }); */
 
   app.useGlobalPipes(
     new ValidationPipe({
