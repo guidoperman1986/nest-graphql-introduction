@@ -14,7 +14,9 @@ import { ConfigModule } from '@nestjs/config';
       driver: ApolloDriver,
       playground: false,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
-      plugins: [ApolloServerPluginLandingPageLocalDefault()],
+      plugins: [
+        /* ApolloServerPluginLandingPageLocalDefault() */
+      ],
     }),
     HelloWorldModule,
     TodoModule,
